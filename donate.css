@@ -1,0 +1,228 @@
+body {
+    overflow-x: hidden;
+}
+
+.c1 {
+    background-image: url(images/contact_banner.png);
+    position: relative;
+    width: 100vw;
+    height: 390px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    /* horizontal centering */
+    align-items: center;
+}
+
+.c1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(1, 21, 13) 20%, rgba(1, 21, 13, 0) 100%);
+}
+
+.text1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 4;
+}
+
+.text11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 204, 0);
+    font-family: lucida handwriting;
+}
+
+.text11 img {
+    height: 2.3rem;
+    width: 2.3rem;
+}
+
+.text1 .text2 h1 {
+    margin: 0%;
+    padding: 0%;
+    font-size: 4rem;
+    font-family: nunito;
+    font-weight: 800;
+    color: white;
+}
+
+.donate-sec1 {
+    padding: 0;
+}
+
+.donate1 h1 {
+    font-family: nunito;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #122f2a;
+    text-align: center;
+}
+
+.donate-para {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 29px;
+    color: #667471;
+    font-family: nunito;
+    margin: auto;
+    text-align: center;
+}
+
+.donate-sec1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.8rem;
+    background-image: url(images/bgsec4.png);
+}
+
+.donate2 {
+    padding-top: 2rem;
+}
+
+.donate21 button {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(255, 204, 0);
+    font-family: nunito;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    font-weight: bold;
+}
+
+.donate21-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donate21-txt p {
+    font-family: lucida handwriting;
+    color: #00715d;
+}
+
+.donate21-txt .fa-solid,
+.fas {
+    color: #0a5e42;
+    font-weight: 900;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    min-width: 400px;
+    font-family: nunito;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    background: #ddd;
+    text-align: center;
+}
+
+.active {
+    background: rgb(255, 204, 0);
+    color:black;
+    text-align: center;
+}
+
+.form-step {
+    display: none;
+}
+#step1 div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+#step1 .name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+.form-step input{
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none;
+    width: 90%;
+}
+.form-step .name input{
+    width: 90%;
+}
+
+.form-step.active {
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #0a5e42;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+#pickup-time {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+/* #step2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+} */
+.food-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.food-details input{
+    width: auto;
+}

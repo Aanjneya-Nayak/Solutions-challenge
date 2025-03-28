@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    
+    <div class="header">
+
+        <div class="logo">
+            <img src="images/logo.webp" alt="Charifund">
+            <span><b>Surplus2Serve</b></span>
+        </div>
+        <!-- <div class="hamburger">
+            <img class="hamburger" src="hamburger.svg" alt="">
+        </div> -->
+        
+          <!-- Side Navigation Menu -->
+    <!-- <div class="side-menu" id="sideMenu">
+        <span class="close-btn" onclick="toggleMenu()">✖</span>
+        <div class="menu-logo">
+            <img src="images/logo.webp" alt="Logo">
+        </div>
+        <ul class="menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="cause.html">Causes</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="quote-btn11">Get A Quote</button>
+
+        <!-- Social Icons 
+        <div class="connect">
+            <div class="social-icons">
+                <div>
+                    
+                    <a href="#" target="_blank" aria-label="share us on fab facebook-f"
+                    title="share us on fab facebook-f"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div>
+
+                    <a href="www.facebook.com" target="_blank"
+                    aria-label="share us on fab twitter" title="share us on fab twitter"><i
+                    class="fab fa-twitter"></i></a>
+                </div>
+                <div>
+                    <a href="#" target="_blank"
+                    aria-label="share us on fab instagram" title="share us on fab instagram"><i
+                    class="fab fa-instagram"></i></a>
+                </div>
+                <div> -->
+<!-- 
+                    <a href="#" target="_blank"
+                    aria-label="share us on fab vimeo-v" title="share us on fab vimeo-v"><i
+                    class="fab fa-vimeo-v"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="cause.html">Causes</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html"><strong>Login</strong></a></li>
+            </ul>
+            <div class="nav-right">
+                <span class="call"><i class="fas fa-phone"></i> 990038476</span>
+                <button class="quote-btn">Get A Quote ↗</button>
+            </div>
+        </nav>
+    </div>
+    
+    <section class="contact-banner">
+        <div class="c1">
+            <div class="text1">
+                <div class="text11">
+
+                    <img src="images/hand.png" alt="">
+                    <p>Start donating poor people</p>
+                </div>
+                <div class="text2">
+                    <h1>Donate</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="donate-sec1">
+        <div class="donate1">
+            <h1>Share Surplus, Serve Smiles!</h1>
+        </div>
+        <div class="donate-para">
+            Your extra food can bring a meal to someone in need.<br>
+            Let's bridge the gap between surplus food and those who need it most.
+        </div>
+        <div class="donate2">
+            <div class="donate21">
+                <div class="donate21-txt">
+                        <i class="fas fa-hand-holding-heart"></i>&nbsp;
+                        <p>Start donating poor people</p>
+                </div>
+                <div class="container">
+                    <div class="progress-bar">
+                        <div class="step active">1</div>
+                        <div class="step">2</div>
+                        <div class="step">3</div>
+                        <div class="step">4</div>
+                        <div class="step">5</div>
+                    </div>
+            
+                    <form id="multiStepForm">
+                        <div class="form-step active" id="step1">
+                            <div>
+
+                                <h2>Step 1: User Information</h2>
+                                <div class="name">
+                                    <input type="text" placeholder="First Name" required>
+                                    <input type="text" placeholder="Last Name" required>
+                                </div>
+                                <div class="name">
+                                    <input type="text" placeholder="Email" required>
+                                    <input type="text" placeholder="Phone" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-step" id="step2">
+                            <h2>Step 2: PickUp Location</h2>
+                            <input type="text" placeholder="PickUp Location" required>
+                            <input type="tel" placeholder="Google Map Location" required>
+                            <div>
+                                <label for="pickup-time">Select Pickup Time:</label>
+                                <select id="pickup-time"></select>
+                            </div>
+
+                        </div>
+                        <div class="form-step" id="step3">
+                            <h2>Step 3: Food Details</h2>
+                            <div>
+                                <h3>Types of Food</h3>
+                                <div class="food-details">
+                                    <div>
+                                        <input type="checkbox" id="f1" name="f1" value="food">
+                                        <label for="f1"> Cooked Food</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="f2" name="f2" value="fruits">
+                                        <label for="f2"> Fruits & Vegetables</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="f3" name="f3" value="liquid">
+                                        <label for="f3"> Liquid/ Semi-Liquid Food</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Quantity</h3>
+                                
+                            </div>
+                        </div>
+                        <div class="form-step" id="step4">
+                            <h2>Step 4: Donation Details</h2>
+                            <input type="text" placeholder="Donation Type" required>
+                            <input type="number" placeholder="Quantity" required>
+                        </div>
+                        <div class="form-step" id="step5">
+                            <h2>Step 5: Review & Submit</h2>
+                            <p>Review your details before submitting.</p>
+                        </div>
+            
+                        <div class="buttons">
+                            <button type="button" id="prevBtn" class="hidden">Previous</button>
+                            <button type="button" id="nextBtn">Continue</button>
+                        </div>
+                    </form>
+                </div>
+            
+                
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="last">
+        <div class="lastsec">
+
+            <div class="subs">
+
+                <h1>Subscribe To Our Newsletter</h1>
+                <p>Regular inspections and feedback mechanisms</p>
+            </div>
+            <div class="news">
+
+                <input type="text" placeholder="Enter Your Email" class="email">
+                <button><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <hr class="partition" />
+
+        <div class="abt">
+            <div class="abt1">
+                <div class="company">
+                    <img src="images/logo.webp" alt="Charifund">
+                    <span><b>Surplus2Serve</b></span>
+                </div>
+                <div class="company2">
+                    <p>Our secure online donation platform allows you to make contributions quickly and safely. Choose
+                        from various.</p>
+                </div>
+            </div>
+
+            <div class="quicklinks">
+                <div>
+                    <h1>Quick Links</h1>
+                    <hr class="partlinks" />
+                </div>
+                <div class="links">
+                    <ul>
+                        <div>
+
+                            <li>
+                                <a href="#">Blog</a>
+
+                            </li>
+                        </div>
+                        <div>
+
+                            <li>
+                                <a href="#">Home</a>
+
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="address">
+                <div>
+                    <h1>Get in Touch</h1>
+                    <hr class="partlinks" />
+                </div>
+                <div class="location">
+                    <ul>
+                        <div>
+
+                            <li>
+                                <a href="https://maps.app.goo.gl/Gr9pTNqz5FRNrjQw8" target="_blank"> <i
+                                        class="fas fa-map-marker-alt"></i> 455 West Orchard Street Kings Mountain, NC
+                                    280867</a>
+
+                            </li>
+                        </div>
+                        <div>
+
+                            <li>
+                                <a href="mailto:support@example.com" target="_blank"> <i class="far fa-envelope"></i>
+                                    support@example.com </a>
+
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="connect">
+            <div class="social">
+                <div>
+                    
+                    <a href="#" target="_blank" aria-label="share us on fab facebook-f"
+                    title="share us on fab facebook-f"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div>
+
+                    <a href="www.facebook.com" target="_blank"
+                    aria-label="share us on fab twitter" title="share us on fab twitter"><i
+                    class="fab fa-twitter"></i></a>
+                </div>
+                <div>
+                    <a href="#" target="_blank"
+                    aria-label="share us on fab instagram" title="share us on fab instagram"><i
+                    class="fab fa-instagram"></i></a>
+                </div>
+                <div>
+
+                    <a href="#" target="_blank"
+                    aria-label="share us on fab vimeo-v" title="share us on fab vimeo-v"><i
+                    class="fab fa-vimeo-v"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="end">
+            <hr class="partlinks" />
+        </div>
+
+
+        <div class="copyright">
+            <p>
+                Copyright © 2025 <span class="highlight-word">Surplus2Serve</span> All Rights Reserved. </p>
+        </div>
+    </footer>
+
+
+
+    <script src="donate.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.flex1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.f1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.f2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.invert{
+    filter: invert(1);
+    /* fill: white; */
+}
+.bg{
+    background-color: #ffcc00;
+    color: black;
+}
