@@ -226,3 +226,7 @@ button {
 .food-details input{
     width: auto;
 }
+.food-details select{
+    padding: 1rem;
+    border-radius: 1rem;
+}
