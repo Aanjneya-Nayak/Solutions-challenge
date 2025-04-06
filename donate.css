@@ -230,3 +230,13 @@ button {
     padding: 1rem;
     border-radius: 1rem;
 }
+.radio-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjust spacing between radio button and text */
+}
+  
+input[type="radio"] {
+    transform: scale(1.2); /* Increase size if needed */
+ }
+  

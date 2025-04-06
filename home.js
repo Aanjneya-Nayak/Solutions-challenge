@@ -36,3 +36,49 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.remove("active");
     });
 });
+
+// index.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+
+// Your Firebase config
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  // ... other config
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// DOM elements
+const loginBtn = document.getElementById("loginBtn");
+const userInfo = document.getElementById("userInfo");
+
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    loginBtn.style.display = "none";
+    userInfo.style.display = "inline";
+
+    try {
+      const docRef = doc(db, "users", user.uid);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        userInfo.textContent = `Hi, ${data.name || user.email}`;
+      } else {
+        userInfo.textContent = `Hi, ${user.email}`;
+      }
+    } catch (err) {
+      console.error("Error fetching user data:", err);
+      userInfo.textContent = `Hi, ${user.email}`;
+    }
+  } else {
+    loginBtn.style.display = "inline";
+    userInfo.style.display = "none";
+  }
+});
+

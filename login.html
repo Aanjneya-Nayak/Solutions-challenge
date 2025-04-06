@@ -11,53 +11,117 @@
   <div class="container" id="container">
     <!-- Sign Up -->
     <div class="form-container sign-up-container">
-      <form action="#" method="post">
+      <form id="signup-form">
         <h1>Create Account</h1>
         <span>Use your email for registration</span>
         <input type="text" placeholder="Name" name="name" required />
         <input type="email" placeholder="Email" name="email" required />
         <input type="password" placeholder="Password" name="password" required />
-        <button type="submit" class="btn-submit">Sign Up</button>
+        <button type="submit" class="sub">Sign Up</button>
       </form>
     </div>
 
     <!-- Sign In -->
     <div class="form-container sign-in-container">
-      <form action="#" method="post">
+      <form id="login-form">
         <h1>Sign in</h1>
         <span>Use your account credentials</span>
-        <input type="text" placeholder="Username or Email" name="username" required />
+        <input type="email" placeholder="Email" name="email" required />
         <input type="password" placeholder="Password" name="password" required />
         <div class="extra-options">
-          <div class="remember-me">
-            <input type="checkbox" id="remember" name="remember" />
-            <label for="remember">Remember me</label>
-          </div>
-          <a href="#">Forgot your password?</a>
+          <label><input type="checkbox" /> Remember me</label>
         </div>
-        <button type="submit" class="btn-submit">Sign In</button>
+        <button type="submit" class="sub">Sign In</button>
       </form>
     </div>
 
-    <!-- Overlay Container -->
+    <!-- Overlay -->
     <div class="overlay-container">
       <div class="overlay">
-        <!-- Left Overlay Panel (for Sign In) -->
         <div class="overlay-panel overlay-left">
           <h1>Welcome Back!</h1>
-          <p>To keep connected with us, please login with your personal info</p>
+          <p>To keep connected, login with your personal info</p>
           <button class="ghost" id="signIn">Sign In</button>
         </div>
-        <!-- Right Overlay Panel (for Sign Up) -->
         <div class="overlay-panel overlay-right">
           <h1>Hello, Friend!</h1>
-          <p>Enter your personal details and start your journey with us</p>
-          <button class="ghost" id="signUp">Sign Up</button>
+          <p>Start your journey with us</p>
+          <button class="ghost" id="signUp" >Sign Up</button>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="login.js"></script>
+  <!-- Firebase & JS -->
+  <script type="module">
+    // Import Firebase modules
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+    import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCDIE-3U5cvM924c_joRphBQngGToZOSyw",
+      authDomain: "surplus2serve-tech.firebaseapp.com",
+      projectId: "surplus2serve-tech",
+      storageBucket: "surplus2serve-tech.appspot.com",
+      messagingSenderId: "521830560684",
+      appId: "1:521830560684:web:847383b10c2d901e96c009",
+      measurementId: "G-GVBBTFLV5J"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // Toggle Sign In/Up
+    document.getElementById("signUp").addEventListener("click", () => {
+      document.getElementById("container").classList.add("right-panel-active");
+    });
+    document.getElementById("signIn").addEventListener("click", () => {
+      document.getElementById("container").classList.remove("right-panel-active");
+    });
+
+    // Sign Up
+    document.getElementById("signup-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = e.target.name.value;
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+
+      try {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        await setDoc(doc(db, "users", user.uid), { name: name, email: email });
+        alert("✅ Account created!");
+        e.target.reset();
+        document.getElementById("container").classList.remove("right-panel-active");
+      } catch (error) {
+        alert("❌ " + error.message);
+      }
+    });
+
+    // Sign In
+    document.getElementById("login-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+
+      try {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        const docRef = doc(db, "users", user.uid);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          const userData = docSnap.data();
+          localStorage.setItem("username", userData.name);
+        }
+
+        window.location.href = "index.html";
+      } catch (error) {
+        alert("❌ Login Error: " + error.message);
+      }
+    });
+  </script>
 </body>
 </html>

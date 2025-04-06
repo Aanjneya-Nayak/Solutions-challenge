@@ -197,7 +197,25 @@ form input {
   text-transform: uppercase;
   transition: 0.3s;
 }
-
+.sub{
+  width: 6rem;
+  padding: 0.5rem 1rem;
+  border-radius: 35px;
+  margin: auto;
+  transition: 0.2s ease-out;
+}
+.sub:hover{
+  cursor: pointer;
+  background-color:aliceblue;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+.extra-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Optional: Adds space between checkbox and text */
+  white-space: nowrap;
+}
 .ghost:hover {
   background-color: rgba(255,255,255,0.2);
 }

@@ -2,7 +2,7 @@
 body{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x:hidden;
 }
 .up-donate{
     /* background-image: url(''); */
@@ -10,7 +10,56 @@ body{
     height: 300px;
     margin-bottom: 300px;
 }
+.c1 {
+    background-image: url(images/contact_banner.png);
+    position: relative;
+    width: 100vw;
+    height: 390px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;  /* horizontal centering */
+    align-items: center; 
+}
+.c1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(1, 21, 13) 20%, rgba(1, 21, 13, 0) 100%);
+}
+.text1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 4;
+}
+.text11{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 204, 0);
+    font-family: lucida handwriting;
+}
+.text11 img{
+        height: 2.3rem;
+        width: 2.3rem;
+}
 
+.text1 .text2 h1{
+    margin: 0%;
+    padding: 0%;
+    font-size: 4rem;
+    font-family: nunito;
+    font-weight: 800;
+    color: white;
+}
 .banner{
     position: absolute;
     z-index: 1;
@@ -58,18 +107,11 @@ body{
     width: 80px;
     transform: rotate(10deg);
 }
-
-
-
-
-
        /* FREQUENTLY ASKED QUESTIONS */
 
 .faq-outer{
     display: flex;
 }
-
-
 /*left*/
 .faq-left{
     padding: 100px 0px;
@@ -94,10 +136,13 @@ body{
     font: 20px lucida handwriting;
     width: 100rem;
 }
-
-
-
-
+.about-head{
+    font-family: Nunito;
+    color: white;
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 0;
+}
 
 /* FAQ Section */
 .faq-section {
@@ -250,10 +295,6 @@ font-size: larger;
 .input-details:focus{
     outline:none;
 }
-
-
-
-
 .container{
     position: relative;
 }
@@ -284,9 +325,6 @@ i img{
     border-radius: 50px;
     margin-top: 5px;
 }
-
-
-
 .buttonimg img{
     width: 18px;
     transform: rotate(-45deg);
@@ -309,13 +347,7 @@ a:hover button, a button:hover{
 a:hover img, a img:hover{
     filter: invert(100%); 
 }
-
-
-
-
             /* sliding images */
-
-
 .slider-container {
     width: 100%;
     margin-top: 53rem;
@@ -343,7 +375,6 @@ a:hover img, a img:hover{
         transform: translateX(-100%);
     }
 }
-
 /* Duplicated content to ensure seamless looping */
 .slider-wrapper {
     display: flex;

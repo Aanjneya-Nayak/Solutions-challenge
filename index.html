@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="home.css">
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="utility.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -24,52 +24,49 @@
         <div class="hamburger">
             <img class="hamburger" src="hamburger.svg" alt="">
         </div>
-        
-          <!-- Side Navigation Menu -->
-    <div class="side-menu" id="sideMenu">
-        <span class="close-btn" onclick="toggleMenu()">✖</span>
-        <div class="menu-logo">
-            <img src="images/logo.webp" alt="Logo">
-        </div>
-        <ul class="menu-links">
-            <li><a href="index.html">Home</a></li>
+
+        <!-- Side Navigation Menu -->
+        <div class="side-menu" id="sideMenu">
+            <span class="close-btn" onclick="toggleMenu()">✖</span>
+            <div class="menu-logo">
+                <img src="images/logo.webp" alt="Logo">
+            </div>
+            <ul class="menu-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="cause.html">Causes</a></li>
                 <li><a href="donate.html">Donate</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="login.html"><strong>Login</strong></a></li>
-        </ul>
-        <button class="quote-btn11">Get A Quote</button>
+            </ul>
+            <button class="quote-btn11">Get A Quote</button>
 
-        <!-- Social Icons -->
-        <div class="connect">
-            <div class="social-icons">
-                <div>
-                    
-                    <a href="#" target="_blank" aria-label="share us on fab facebook-f"
-                    title="share us on fab facebook-f"><i class="fab fa-facebook-f"></i></a>
-                </div>
-                <div>
+            <!-- Social Icons -->
+            <div class="connect">
+                <div class="social-icons">
+                    <div>
 
-                    <a href="www.facebook.com" target="_blank"
-                    aria-label="share us on fab twitter" title="share us on fab twitter"><i
-                    class="fab fa-twitter"></i></a>
-                </div>
-                <div>
-                    <a href="#" target="_blank"
-                    aria-label="share us on fab instagram" title="share us on fab instagram"><i
-                    class="fab fa-instagram"></i></a>
-                </div>
-                <div>
+                        <a href="#" target="_blank" aria-label="share us on fab facebook-f"
+                            title="share us on fab facebook-f"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div>
 
-                    <a href="#" target="_blank"
-                    aria-label="share us on fab vimeo-v" title="share us on fab vimeo-v"><i
-                    class="fab fa-vimeo-v"></i></a>
+                        <a href="www.facebook.com" target="_blank" aria-label="share us on fab twitter"
+                            title="share us on fab twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank" aria-label="share us on fab instagram"
+                            title="share us on fab instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div>
+
+                        <a href="#" target="_blank" aria-label="share us on fab vimeo-v"
+                            title="share us on fab vimeo-v"><i class="fab fa-vimeo-v"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
         <nav class="navbar">
@@ -80,32 +77,36 @@
                 <li><a href="donate.html">Donate</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html"><strong>Login</strong></a></li>
+
             </ul>
             <div class="nav-right">
                 <span class="call"><i class="fas fa-phone"></i> 990038476</span>
-                <button class="quote-btn">Get A Quote ↗</button>
+                <button id="loginBtn" class="quote-btn"><a href="login.html"><strong>Login</strong></a></button>
+                <span id="userInfo" style="display: none; color: green;">Info</span>
             </div>
+            <!-- In your top navbar -->
+
         </nav>
     </div>
-    
+
 
     <section class="homesec">
         <div class="c1">
             <div class="para">
 
-               <div class="text1">
+                <div class="text1">
                     <div class="text11">
 
-                         <img src="images/hand.png" alt="">
+                        <img src="images/hand.png" alt="">
                         <p>Start Donating Poor People</p>
                     </div>
                     <div class="text2">
-                        <h1>Join The Movement <br> Share, Save, <span class="bottom-line">Serve</span><br>Impact A Life!</h1>
+                        <h1>Join The Movement <br> Share, Save, <span class="bottom-line">Serve</span><br>Impact A Life!
+                        </h1>
                     </div>
                     <div class="buttons">
                         <div class="btn1"> <a href="donate.html" class="href">Donate Now ↗</a></div>
-                        <div class="btn2 bg">Find Food <b>↗</b></div>
+                        <div class="btn2 bg"><a href="find_food.html" class="href">Find food↗</a></div>
                     </div>
                 </div>
 
@@ -127,14 +128,38 @@
                 Join our monthly giving program to provide consistent support to our initiatives. Regular contributions,
                 no matter the size, help us plan and sustain long-term projects.
             </div>
+            <div class="divya">
 
-            <div class="sec3txt4">
-                <div class="txt41">
-                    <i class="fa-solid fa-bowl-food"></i>
-                    <h2>Healthy Food</h2>
+                <div class="sec3txt4">
+                    <div class="txt41">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <h2>Healthy Food</h2>
+                    </div>
+                    <div class="txt42">Set up a secure and user-friendly online donation platform that accepts multiple
+                    </div>
+
                 </div>
-                <div class="txt42">Set up a secure and user-friendly online donation platform that accepts multiple
+                <div class="sec3txt41">
+                    <div class="txt41">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <h2>Healthy Food</h2>
+                    </div>
+                    <div class="txt42">Set up a secure and user-friendly online donation platform that accepts multiple
+                    </div>
+
                 </div>
+
+                <div class="sec3txt42">
+                    <div class="txt41">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <h2>Healthy Food</h2>
+                    </div>
+                    <div class="txt42">Set up a secure and user-friendly online donation platform that accepts multiple
+                    </div>
+
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -160,7 +185,9 @@
                 <p class="highlight"><i class="fas fa-hand-holding-heart"></i>&nbsp;
                     Start Donating Poor People</p>
                 <h1>Helping Each Other Can Make <span class="highlight-word">World</span> Better</h1>
-                <p class="cont2p">Every day, perfectly good food goes to waste while millions go hungry. Surplus2Serve bridges this gap by connecting restaurants, hotels, and event organizers with NGOs and volunteers who can distribute food to those in need.</p>
+                <p class="cont2p">Every day, perfectly good food goes to waste while millions go hungry. Surplus2Serve
+                    bridges this gap by connecting restaurants, hotels, and event organizers with NGOs and volunteers
+                    who can distribute food to those in need.</p>
 
                 <div class="features">
                     <div class="feature-box">
@@ -253,10 +280,27 @@
         </div>
 
         <div class="testcard">
-           
-            <div class="cardmonials"><i><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"> <img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"></i><br>Surplus2Serve has made it easy for us to donate leftover food instead of wasting it. We feel proud knowing our food helps those in need.</div>
-            <div class="cardmonials"><i><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"> <img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img src="images/b5c56278-f1e3-4c32-9cd5-562985f25e64.png"></i><br>This platform has simplified food donations for our NGO. We can now quickly find and request surplus food, ensuring timely meals for many.</div>
-            <div class="cardmonials"><i><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"> <img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img src="images/b2443f97-daaa-4b8b-a69a-83f969676908.png"></i><br>Volunteering through Surplus2Serve is a rewarding experience. Connecting donors with NGOs has never been easier!</div>
+
+            <div class="cardmonials"><i><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"> <img
+                        src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img
+                        src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img
+                        src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img
+                        src="images/4af44747-2d54-452e-9373-8e6b36408850.png"></i><br>Surplus2Serve has made it easy for
+                us to donate leftover food instead of wasting it. We feel proud knowing our food helps those in need.
+            </div>
+            <div class="cardmonials"><i><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"> <img
+                        src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img
+                        src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img
+                        src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img
+                        src="images/b5c56278-f1e3-4c32-9cd5-562985f25e64.png"></i><br>This platform has simplified food
+                donations for our NGO. We can now quickly find and request surplus food, ensuring timely meals for many.
+            </div>
+            <div class="cardmonials"><i><img src="images/4af44747-2d54-452e-9373-8e6b36408850.png"> <img
+                        src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img
+                        src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img
+                        src="images/4af44747-2d54-452e-9373-8e6b36408850.png"><img
+                        src="images/b2443f97-daaa-4b8b-a69a-83f969676908.png"></i><br>Volunteering through Surplus2Serve
+                is a rewarding experience. Connecting donors with NGOs has never been easier!</div>
         </div>
     </section>
 
@@ -316,26 +360,26 @@
                     </ul>
                 </div>
 
-                
+
                 <div class="progress-container">
                     <!-- First Progress Circle -->
                     <div>
                         <div class="progress">
                             <svg width="100" height="100">
-                                <circle cx="50" cy="50" r="45" class="background"/>
-                                <circle cx="50" cy="50" r="45" class="progress-circle" data-value="75"/>
+                                <circle cx="50" cy="50" r="45" class="background" />
+                                <circle cx="50" cy="50" r="45" class="progress-circle" data-value="75" />
                             </svg>
                             <div class="progress-text">0%</div>
                         </div>
                         <p class="label">Treatment Helping</p>
                     </div>
-            
+
                     <!-- Second Progress Circle -->
                     <div>
                         <div class="progress">
                             <svg width="100" height="100">
-                                <circle cx="50" cy="50" r="45" class="background"/>
-                                <circle cx="50" cy="50" r="45" class="progress-circle" data-value="90"/>
+                                <circle cx="50" cy="50" r="45" class="background" />
+                                <circle cx="50" cy="50" r="45" class="progress-circle" data-value="90" />
                             </svg>
                             <div class="progress-text">0%</div>
                         </div>
@@ -435,26 +479,23 @@
         <div class="connect">
             <div class="social">
                 <div>
-                    
+
                     <a href="#" target="_blank" aria-label="share us on fab facebook-f"
-                    title="share us on fab facebook-f"><i class="fab fa-facebook-f"></i></a>
+                        title="share us on fab facebook-f"><i class="fab fa-facebook-f"></i></a>
                 </div>
                 <div>
 
-                    <a href="www.facebook.com" target="_blank"
-                    aria-label="share us on fab twitter" title="share us on fab twitter"><i
-                    class="fab fa-twitter"></i></a>
+                    <a href="www.facebook.com" target="_blank" aria-label="share us on fab twitter"
+                        title="share us on fab twitter"><i class="fab fa-twitter"></i></a>
                 </div>
                 <div>
-                    <a href="#" target="_blank"
-                    aria-label="share us on fab instagram" title="share us on fab instagram"><i
-                    class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="share us on fab instagram"
+                        title="share us on fab instagram"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div>
 
-                    <a href="#" target="_blank"
-                    aria-label="share us on fab vimeo-v" title="share us on fab vimeo-v"><i
-                    class="fab fa-vimeo-v"></i></a>
+                    <a href="#" target="_blank" aria-label="share us on fab vimeo-v" title="share us on fab vimeo-v"><i
+                            class="fab fa-vimeo-v"></i></a>
                 </div>
             </div>
         </div>
@@ -472,7 +513,12 @@
 
     <!-- Swiper JS -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-    <script src="home.js"></script>
+    <script type="module" src="home.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
 
 </body>
 

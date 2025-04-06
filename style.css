@@ -17,7 +17,6 @@ body {
 }
 
 
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -87,6 +86,13 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+.nav-right a{
+    color: white;
+    text-decoration: none;
+}
+.nav-right button:hover{
+   background-color: #00715d;
 }
 
 @media (max-width: 768px) {
@@ -268,15 +274,15 @@ body {
     color: white;
     margin: 0;
 }
-.links ul{
+.last .quicklinks .links ul{
     margin: 0;
     padding: 0;
 }
-.links li{
+.last .quicklinks .links li{
     list-style: none;
     line-height: 30px;
 }
-.links li::before{
+.last .quicklinks .links li::before{
     content: "\f061";
     font-family: "FontAwesome";
     transform: rotate(-45deg);
@@ -391,4 +397,15 @@ body {
     color: white;
     font-weight: 700;
     font-size: 1rem;
+}
+.news button{
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.news button:hover{
+    transform: scale(1.1);
+    background-color:#00715d;
+}
+.news button:hover i{
+    color: white;
 }

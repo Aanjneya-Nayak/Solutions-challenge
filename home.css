@@ -484,9 +484,14 @@ image-container::before{
     cursor: pointer;
     font-size: 13px;
     font-family: nunito;
-    font-weight: bold;
+    
     border-radius: 25px;
     transition: background-color 0.3s ease-in-out;
+}
+.btn2 a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 .btn1:hover {
@@ -498,8 +503,10 @@ image-container::before{
 }
 .btn2:hover{
     background-color: #008f72;
-    color: white;
     font-weight: 800;
+}
+.btn2:hover a{
+    color: white;
 }
 .homesec4{
     padding: 5rem;
@@ -530,7 +537,7 @@ image-container::before{
     width:350px;
     border: 1px solid #ffcc00;
     border-radius: 25px;
-    padding: 2rem;
+    padding: 1.5rem;
     font-family: nunito;
     color: #667471;
     font-size: 1rem;
@@ -1437,4 +1444,39 @@ image-container::before{
 
 .cardmonials img{
     width: 30px;
+}
+.divya{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+.divya .sec3txt41{
+    background-image: url(images/bg-three.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 81px 0px;
+    height: 220px;
+    width: 350px;
+}
+.divya .sec3txt42{
+    background-image: url(images/home-bg-img1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 81px 0px;
+    height: 220px;
+    width: 350px;
 }

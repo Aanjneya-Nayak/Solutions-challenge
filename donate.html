@@ -76,11 +76,10 @@
                 <li><a href="donate.html">Donate</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html"><strong>Login</strong></a></li>
             </ul>
             <div class="nav-right">
                 <span class="call"><i class="fas fa-phone"></i> 990038476</span>
-                <button class="quote-btn">Get A Quote ↗</button>
+                <button class="quote-btn"><a href="login.html"><strong>Login</strong></a></button>
             </div>
         </nav>
     </div>
@@ -178,11 +177,22 @@
                                       </select>
                                 </div>
                             </div>
+                            <div>
+                                <h3>Upload Food Image(s)</h3>
+                                <form id="uploadForm" enctype="multipart/form-data">
+                                    <input type="file" id="imageInput" name="images" accept="image/*" multiple required>
+                                    <button type="submit">Upload</button>
+                                </form>
+                            </div>
                         </div>
                         <div class="form-step" id="step4">
-                            <h2>Step 4: Donation Details</h2>
-                            <input type="text" placeholder="Donation Type" required>
-                            <input type="number" placeholder="Quantity" required>
+                            <h2>Step 4: Additional Details</h2>
+                            <input type="text" placeholder="Special Instructions" required>
+                            <h2>Hygiene Confirmation</h2>
+                            <div class="radio-container">
+                                <input type="checkbox" id="food-confirm" name="food" />
+                                <label for="food-confirm">I confirmed that food is fresh, properly stored and safe for consumption.</label>
+                              </div>                            
                         </div>
                         <div class="form-step" id="step5">
                             <h2>Step 5: Review & Submit</h2>
@@ -325,5 +335,36 @@
 
 
     <script src="donate.js"></script>
+    <script>
+        document.getElementById("uploadForm").addEventListener("submit", async (event) => {
+            event.preventDefault();
+        
+            const formData = new FormData();
+            const fileInput = document.getElementById("imageInput");
+        
+            if (fileInput.files.length === 0) {
+                alert("Please select at least one image.");
+                return;
+            }
+        
+            if (fileInput.files.length > 5) {
+                alert("You can only upload up to 5 images.");
+                return;
+            }
+        
+            // Append images to formData
+            for (let i = 0; i < fileInput.files.length; i++) {
+                formData.append("images", fileInput.files[i]);
+            }
+        
+            const response = await fetch("/upload", {
+                method: "POST",
+                body: formData
+            });
+        
+            const result = await response.json();
+            alert(result.message);
+        });
+        </script>
 </body>
 </html>
